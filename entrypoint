@@ -1,0 +1,2 @@
+#! /bin/sh
+socat TCP-LISTEN:80,fork,reuseaddr SYSTEM:'echo HTTP/1.1 401 "Authorization Required"; echo "Server: Apache"; echo "X-Backend-Server: example.com"; echo "Content-Type: text/html"; charset=iso-8859-1; echo;'
